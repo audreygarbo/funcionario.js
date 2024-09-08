@@ -14,11 +14,11 @@ class Funcionario {
     }
 
     seApresentar() {
-        console.log("Olá, meu nome é ${this.nome}, tenho ${this.idade} anos e sou ${this.cargo}.");
+        console.log(`Olá, meu nome é ${this.nome}, tenho ${this.idade} anos e sou ${this.cargo}.`);
     }
 
     trabalhar() {
-        console.log("${this.nome} está trabalhando atualmente.");
+        console.log(`${this.nome} está trabalhando atualmente.`);
     }
 }
 
@@ -26,7 +26,7 @@ class Gerente extends Funcionario {
     constructor(nome, idade, cargo, departamento) {
         super(nome, idade, cargo);
 
-// Chama o construtor da classe pai
+        // Chama o construtor da classe pai
 
         this.departamento = departamento;
     }
@@ -43,20 +43,20 @@ class Desenvolvedor extends Funcionario {
     }
 
     programar() {
-        console.log("${this.nome} está programando em ${this.linguagem}.");
+        console.log(`${this.nome} está programando em ${this.linguagem}.`);
 
     }
 }
 
 // Criando instâncias
-const gerente = new Gerente("Henry", 47, "Gerente", "Marketing");
-const desenvolvedor = new Desenvolvedor("Audrey Machado", 32, "Desenvolvedora", "JavaScript");
+const gerente1 = new Gerente('Henry', 47, 'Gerente', 'Marketing');
+const desenvolvedor1 = new Desenvolvedor('Audrey Machado', 32, 'Desenvolvedora', 'JavaScript');
 
 // Chamando os métodos
-gerente.seApresentar();
-gerente.trabalhar();
-gerente.gerenciar();
+gerente1.seApresentar();
+gerente1.trabalhar();
+gerente1.gerenciar();
 
-desenvolvedor.seApresentar();
-desenvolvedor.trabalhar();
-desenvolvedor.programar();
+desenvolvedor1.seApresentar();
+desenvolvedor1.trabalhar();
+desenvolvedor1.programar();
